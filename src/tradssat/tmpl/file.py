@@ -13,20 +13,22 @@ class File(object):
     Parent class for all file objects.
     """
 
-    def __init__(self, file):
+    def __init__(self, file=None):
         """
 
         Parameters
         ----------
-        file: str
+        file : str, optional
+            path to the file to be read
 
         """
         self.file = file
         self._var_info = VariableSet(self._get_var_info())
 
         self._values = FileValueSet()
-        self.encoding = detect_encod(self.file)
-        self._read()
+        if file != None:
+            self.encoding = detect_encod(self.file)
+            self._read()
 
     def _read(self):
 

@@ -12,7 +12,7 @@ class InpFile(File):
 
     ext = None  # type: str
 
-    def __init__(self, file):
+    def __init__(self, file=None):
         self._header_vars = HeaderVariableSet(self._get_header_vars())
         super().__init__(file)
 
