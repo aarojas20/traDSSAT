@@ -126,8 +126,8 @@ main_vars = {
     IntegerVar('P', 2, spc=0, sect='PLANTING DETAILS', info='Planting level number'),
     IntegerVar('PDATE', 5, info='Planting date, year + days from Jan. 1'),
     IntegerVar('EDATE', 5, info='Emergence date, earliest treatment'),
-    FloatVar('PPOP', 5, 2, info='Plant population at seeding, plants m-2'),
-    FloatVar('PPOE', 5, 2, info='Plant population at emergence, plants m-2 '),
+    FloatVar('PPOP', 5, 1, info='Plant population at seeding, plants m-2'),
+    FloatVar('PPOE', 5, 1, info='Plant population at emergence, plants m-2 '),
     CharacterVar(
         'PLME', 1, spc=5, info='Planting method, transplant (T), seed (S), pregerminated seed (P) or nursery (N)'
     ),
@@ -378,6 +378,7 @@ main_vars = {
     CharacterVar('NIOUT', 1, spc=5, info='Nitrogen (Y = yes; N = no)'),
     CharacterVar('MIOUT', 1, spc=5, info='Phosphorous (Y = yes; N = no)'),
     CharacterVar('DIOUT', 1, spc=5, info='Diseases and other pests (Y = yes; N = no)'),
+    CharacterVar('LONG', 1, spc=5, info='Wide (Y) or 80-column (N) daily outputs'),
 
     # todo: check and document
     CharacterVar('VBOSE', 1, spc=5, info='Wide (Y) or 80-column (N) daily outputs'),
